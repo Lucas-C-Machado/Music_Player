@@ -1,53 +1,63 @@
-# 🎵 Music Player Didático
+# 🎵 Didactic Music Player
 
-## 📝 Visão Geral
+## 🌍 Live Demo
 
-Este projeto é um **Reprodutor de Música** simples e didático, desenvolvido com **HTML5**, **CSS3** e **JavaScript Puro**. Seu propósito é demonstrar a implementação de um player de áudio interativo, cobrindo desde a estrutura semântica até a lógica de controle de reprodução e a aplicação de temas dinâmicos.
+Access the full project running online:
 
-É um excelente recurso para aprender sobre:
-*   A API `HTMLMediaElement` (`<audio>`).
-*   Manipulação do DOM para controle de UI.
-*   Uso de **Variáveis CSS** para temas e personalização.
-*   Gerenciamento de playlist e reprodução automática.
+🔗 [https://8080-it7ahwp1espf2ftc1flko-b6ed10a8.manusvm.computer](https://music-player-five-phi.vercel.app/)
+
+This link allows visitors to explore the music player exactly as intended, including playback controls, dynamic theming, and the interactive playlist.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📝 Overview
 
-A organização do projeto é clara e modular, facilitando a manutenção e o estudo:
+This project is a simple and didactic **Music Player**, developed using **Pure HTML5**, **CSS3**, and **Pure JavaScript**. Its purpose is to demonstrate the implementation of an interactive audio player, covering everything from the semantic structure to the playback control logic and the application of dynamic themes.
+
+It is an excellent resource for learning about:
+*   The `HTMLMediaElement` API (`<audio>`).
+*   DOM manipulation for UI control.
+*   The use of **CSS Variables** for theming and customization.
+*   Playlist management and automatic playback.
+
+---
+
+## 📂 Project Structure
+
+The project organization is clear and modular, facilitating maintenance and study:
 
 ```
 Music_Player/
 ├── assets/
-│   ├── audio/      → Arquivos de áudio (.mp3) de exemplo.
-│   └── images/     → Capas dos álbuns (.png).
+│   ├── audio/      → Example audio files (.mp3).
+│   └── images/     → Album covers (.png).
 ├── css/
-│   ├── base.css    → Estilos de reset e base.
-│   ├── player.css  → Estilos do componente player.
-│   ├── styles.css  → Estilos globais e de layout.
-│   └── variables.css → Variáveis CSS e temas dinâmicos.
+│   ├── base.css    → Reset and base styles.
+│   ├── player.css  → Player component styles.
+│   ├── styles.css  → Global and layout styles.
+│   └── variables.css → CSS Variables and dynamic themes.
 ├── js/
-│   ├── data.js     → Metadados da playlist (título, artista, URL, capa).
-│   ├── script.js   → Lógica principal do player (controles, eventos de áudio).
-│   └── ui.js       → Funções de manipulação da interface (renderização, atualização de display).
-└── index.html      → Arquivo principal da interface.
+│   ├── data.js     → Playlist metadata (title, artist, URL, cover).
+│   ├── script.js   → Main player logic (controls, audio events).
+│   └── ui.js       → Interface manipulation functions (rendering, display update).
+└── index.html      → Main interface file.
 ```
 
 ---
 
-## 🌐 1. HTML – Estrutura Semântica
+## 🌐 1. HTML – Semantic Structure
 
-O arquivo `index.html` define a estrutura do player, utilizando elementos para garantir a acessibilidade e a clareza do código.
+The `index.html` file defines the player's structure, using elements to ensure accessibility and code clarity.
 
-### **Principais Componentes:**
+### **Main Components:**
 
-*   **`<div class="container">`**: Contém todo o player e a playlist.
-*   **`<div class="song-info">`**: Exibe a capa do álbum e os detalhes da música.
-*   **`<audio id="audioPlayer">`**: O elemento central que utiliza a API `HTMLMediaElement` para reprodução.
-*   **`<div class="controls">`**: Agrupa os botões de controle (Play/Pause, Próxima, Anterior).
-*   **`<div class="playlist-section">`**: Contém a lista de músicas interativa.
+*   **`<div class="container">`**: Contains the entire player and playlist.
+*   **`<div class="song-info">`**: Displays the album cover and song details.
+*   **`<audio id="audioPlayer">`**: The central element that uses the `HTMLMediaElement` API for playback.
+*   **`<div class="controls">`**: Groups the control buttons (Play/Pause, Next, Previous).
+*   **`<div class="playlist-section">`**: Contains the interactive music list.
 
-### **Exemplo de Estrutura (index.html):**
+### **Structure Example (index.html):**
 
 ```html
 <div class="player">
@@ -61,33 +71,33 @@ O arquivo `index.html` define a estrutura do player, utilizando elementos para g
         </div>
     </div>
     <audio id="audioPlayer"></audio>
-    <!-- ... Controles e Barras ... -->
+    <!-- ... Controls and Bars ... -->
 </div>
 ```
 
 ---
 
-## 🎨 2. CSS – Estilização e Temas Dinâmicos
+## 🎨 2. CSS – Styling and Dynamic Themes
 
-A estilização é feita com CSS puro, com destaque para o uso de **Variáveis CSS** (`--cor-primaria`, `--cor-fundo`, etc.) definidas em `css/variables.css`.
+Styling is done with pure CSS, with emphasis on the use of **CSS Variables** (`--cor-primaria`, `--cor-fundo`, etc.) defined in `css/variables.css`.
 
-### **Funcionalidade de Temas:**
+### **Theming Feature:**
 
-O projeto implementa temas dinâmicos que mudam automaticamente com a música. A função `atualizarTema` em `js/script.js` adiciona classes (`theme-musica2`, `theme-musica3`, etc.) ao `<body>`, e o `variables.css` redefine as cores para cada tema.
+The project implements dynamic themes that change automatically with the song. The `atualizarTema` function in `js/script.js` adds classes (`theme-musica2`, `theme-musica3`, etc.) to the `<body>`, and `variables.css` redefines the colors for each theme.
 
-### **Exemplo de Variáveis CSS (variables.css):**
+### **CSS Variables Example (variables.css):**
 
 ```css
-/* CORES PADRÃO */
+/* DEFAULT COLORS */
 :root {
     --cor-primaria: #6366f1;
     --cor-fundo: #ffffff;
     /* ... */
 }
 
-/* TEMA PARA MÚSICA 2 */
+/* THEME FOR SONG 2 */
 body.theme-musica2 {
-    --cor-primaria: #f59e0b; /* Amarelo/Laranja */
+    --cor-primaria: #f59e0b; /* Yellow/Orange */
     --cor-fundo: #fffbeb;
     /* ... */
 }
@@ -95,66 +105,66 @@ body.theme-musica2 {
 
 ---
 
-## ⚙️ 3. JavaScript – Lógica do Player e Interatividade
+## ⚙️ 3. JavaScript – Player Logic and Interactivity
 
-A lógica do player é dividida em três arquivos para melhor organização:
+The player logic is divided into three files for better organization:
 
-### **`js/data.js` (Metadados)**
+### **`js/data.js` (Metadata)**
 
-Contém o array `songs` com todos os dados da playlist.
+Contains the `songs` array with all the playlist data.
 
 ```javascript
 const songs = [
     {
         id: 1,
-        title: "Le Nozze di Figaro (Abertura)",
+        title: "Le Nozze di Figaro (Overture)",
         artist: "Wolfgang Amadeus Mozart",
         url: "assets/audio/mozard-figaro.mp3",
         cover: "assets/images/mozard.png"
     },
-    // ... outras músicas
+    // ... other songs
 ];
 ```
 
-### **`js/script.js` (Controle Principal)**
+### **`js/script.js` (Main Control)**
 
-Gerencia a reprodução, os eventos de áudio e a navegação entre as músicas.
+Manages playback, audio events, and navigation between songs.
 
-*   **`AudioControl.toggle()`**: Alterna entre reproduzir e pausar.
-*   **`loadSong(index)`**: Carrega uma nova música, atualiza a UI e aplica o tema.
-*   **Eventos de Áudio**: Lida com `timeupdate` (barra de progresso), `loadedmetadata` (duração) e `ended` (próxima música automática).
+*   **`AudioControl.toggle()`**: Toggles between playing and pausing.
+*   **`loadSong(index)`**: Loads a new song, updates the UI, and applies the theme.
+*   **Audio Events**: Handles `timeupdate` (progress bar), `loadedmetadata` (duration), and `ended` (automatic next song).
 
-### **`js/ui.js` (Interface do Usuário)**
+### **`js/ui.js` (User Interface)**
 
-(Presumido, pois `script.js` chama `UI.updateSongDisplay` e `UI.renderPlaylist`). Este arquivo contém as funções para renderizar a playlist e atualizar os elementos visuais (título, artista, capa, tempo).
-
----
-
-## 🛠️ Como Executar
-
-Não é necessário servidor web. Para rodar o projeto:
-
-1.  **Baixe** ou **clone** este repositório.
-2.  Abra o arquivo `index.html` diretamente no seu navegador web (Chrome, Firefox, Edge, etc.).
+(Presumed, as `script.js` calls `UI.updateSongDisplay` and `UI.renderPlaylist`). This file contains the functions to render the playlist and update the visual elements (title, artist, cover, time).
 
 ---
 
-## 🔧 Personalização
+## 🛠️ How to Run
 
-### Adicionar Novas Músicas
+No web server is required. To run the project:
 
-1.  Adicione o arquivo de áudio (`.mp3`) em `assets/audio/`.
-2.  Adicione a capa do álbum (`.png` ou `.jpg`) em `assets/images/`.
-3.  Edite `js/data.js` e adicione um novo objeto ao array `songs`.
-
-### Criar Novos Temas
-
-1.  Edite `css/variables.css` e crie um novo seletor `body.theme-musicaN` (onde `N` é o ID da nova música).
-2.  Defina as novas variáveis de cor dentro deste seletor.
-3.  Atualize a função `atualizarTema` em `js/script.js` para aplicar a nova classe de tema.
+1.  **Download** or **clone** this repository.
+2.  Open the `index.html` file directly in your preferred web browser (Chrome, Firefox, Edge, etc.).
 
 ---
 
-## 📚 Conclusão
+## 🔧 Customization
 
-Este projeto é uma base sólida para quem deseja explorar a manipulação de áudio e a criação de interfaces dinâmicas com tecnologias web puras. A estrutura modular e o uso de variáveis CSS o tornam um excelente ponto de partida para personalização e expansão.
+### Adding New Songs
+
+1.  Add the audio file (`.mp3`) to the `assets/audio/` folder.
+2.  Add the album cover (`.png` or `.jpg`) to the `assets/images/` folder.
+3.  Edit `js/data.js` and add a new object to the `songs` array.
+
+### Creating New Themes
+
+1.  Edit `css/variables.css` and create a new selector `body.theme-musicaN` (where `N` is the ID of the new song).
+2.  Define the new color variables within this selector.
+3.  Update the `atualizarTema` function in `js/script.js` to apply the new theme class.
+
+---
+
+## 📚 Conclusion
+
+This project is a solid foundation for anyone looking to explore audio manipulation and the creation of dynamic interfaces with pure web technologies. The modular structure and the use of CSS variables make it an excellent starting point for customization and expansion.
