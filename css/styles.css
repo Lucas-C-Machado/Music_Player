@@ -1,0 +1,46 @@
+/* MASTER STYLESHEET 
+   Este arquivo consolida a estrutura sem redundâncias e garante o layout das imagens.
+*/
+
+/* 1. IMPORTAÇÃO DOS MÓDULOS */
+@import url('variables.css');
+@import url('base.css');
+@import url('player.css');
+
+/* 2. CORREÇÕES DE ESTRUTURA (Para garantir que o layout não "encolha") */
+
+.container {
+    width: 100% !important;
+    max-width: 450px !important; /* Tamanho ideal baseado na sua imagem */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garante que os controles ocupem o espaço horizontal corretamente */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+/* Ajuste para que a barra de progresso não fique "esmagada" */
+.progress-container {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Ajuste da Playlist para preencher o fundo corretamente */
+.playlist-section {
+    flex-grow: 1;
+    width: 100%;
+}

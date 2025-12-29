@@ -1,0 +1,59 @@
+:root {
+    --fonte-normal: 1rem;
+    --fonte-grande: 1.25rem;
+    --fonte-titulo: 1.875rem;
+    --raio-grande: 1rem;
+    --espacamento-lg: 2rem;
+    --sombra-forte: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+    /* CORES PADRÃO */
+    --cor-primaria: #6366f1;
+    --cor-secundaria: #4f46e5;
+    --cor-gradiente-fundo: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --cor-fundo: #ffffff;
+    --cor-fundo-escuro: #f3f4f6;
+    --cor-texto: #1f2937;
+    --cor-texto-claro: #6b7280;
+    --cor-borda: #e5e7eb;
+    --cor-hover: #f0f4ff;
+}
+
+/* TEMA PARA MÚSICA 2 */
+body.theme-musica2 {
+    --cor-primaria: #f59e0b; /* Amarelo/Laranja */
+    --cor-secundaria: #d97706;
+    --cor-gradiente-fundo: linear-gradient(135deg, #fef3c7 0%, #f59e0b 100%);
+    --cor-fundo: #fffbeb;
+    --cor-texto: #451a03;
+    --cor-hover: #fef3c7;
+}
+
+/* TEMA PARA MÚSICA 3 */
+body.theme-musica3 {
+    --cor-primaria: #10b981; /* Verde */
+    --cor-secundaria: #059669;
+    --cor-gradiente-fundo: linear-gradient(135deg, #d1fae5 0%, #10b981 100%);
+    --cor-fundo: #ecfdf5;
+    --cor-texto: #064e3b;
+    --cor-hover: #d1fae5;
+}
+
+/* TEMA PARA MÚSICA 4 */
+body.theme-musica4 {
+    --cor-primaria: #ec4899; /* Rosa/Pink */
+    --cor-secundaria: #be185d;
+    --cor-gradiente-fundo: linear-gradient(135deg, #fbcfe8 0%, #ec4899 100%);
+    --cor-fundo: #fdf2f8;
+    --cor-texto: #500724;
+    --cor-hover: #fbcfe8;
+}
+
+/* TEMA PARA MÚSICA 5 */
+body.theme-musica5 {
+    --cor-primaria: #8b5cf6; 
+    --cor-gradiente-fundo: linear-gradient(135deg, #2e1065 0%, #8b5cf6 100%);
+    --cor-fundo: #1e1b4b;
+    --cor-fundo-escuro: #312e81;
+    --cor-texto: #ffffff;
+    --cor-texto-claro: #c4b5fd;
+}

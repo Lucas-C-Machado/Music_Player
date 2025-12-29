@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um reprodutor de música didático criado com HTML, CSS e JavaScript puros">
+    <title>Reprodutor de Música Didático</title>
+     
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/player.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <header class="player-header">
+            <h1 class="player-title">🎵 Reprodutor de Música</h1>
+            <p class="player-subtitle">Aprenda como funciona um reprodutor de música interativo</p>
+        </header>
+        
+        <div class="player">
+            
+            <div class="song-info">
+                <div class="album-cover">
+                    <img id="albumCover" src="https://via.placeholder.com/320?text=Album" alt="Capa do álbum">
+                </div>
+                
+                <div class="song-details">
+                    <h2 id="songTitle" class="song-title">Selecione uma música</h2>
+                    <p id="artistName" class="artist-name">Artista desconhecido</p>
+                    <p id="albumName" class="album-name">Álbum desconhecido</p>
+                </div>
+            </div>
+            
+            <audio id="audioPlayer"></audio>
+            
+            <div class="controls">
+                <button id="prevBtn" class="control-btn" title="Música anterior">⏮️ Anterior</button>
+                <button id="playBtn" class="control-btn play-btn" title="Reproduzir/Pausar">▶️ Reproduzir</button>
+                <button id="nextBtn" class="control-btn" title="Próxima música">Próxima ⏭️</button>
+            </div>
+            
+            <div class="range-group">
+                <span id="currentTime" class="time-info">0:00</span>
+                <input type="range" id="progressBar" class="custom-range" min="0" max="100" value="0">
+                <span id="duration" class="time-info">0:00</span>
+            </div>
+            
+            <div class="range-group volume-section">
+                <span class="time-info">🔊</span>
+                <input type="range" id="volumeSlider" class="custom-range" min="0" max="100" value="70">
+                <span id="volumeValue" class="time-info">70%</span>
+            </div>
+        </div>
+        
+        <div class="playlist-section">
+            <h3 class="playlist-title">📋 Lista de Reprodução</h3>
+            <div id="playlist" class="playlist">
+                </div>
+        </div>
+    </div>
+    
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+/* ============================================
+    PLAYER.CSS
+   ============================================ */
+
+/* HEADER */
+.player-header {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    transition: background-color 0.8s ease;
+}
+
+/* INFO DA MÚSICA */
+.song-info {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.album-cover {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-details { 
+    text-align: center; 
+    width: 100%;
+}
+
+.song-title { 
+    font-size: 1.5rem; 
+    color: var(--cor-texto); 
+    margin-bottom: 0.2rem; 
+    transition: color 0.8s ease;
+}
+
+.artist-name { 
+    font-size: 0.95rem; 
+    color: var(--cor-texto-claro); 
+    transition: color 0.8s ease;
+}
+
+/* CONTROLES */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 25% 1rem;
+}
+
+.control-btn {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto);
+    flex: 1;
+    max-width: 140px;
+    transition: all 0.3s ease;
+}
+
+.play-btn { 
+    background-color: var(--cor-primaria); 
+    color: white; 
+    transition: background-color 0.8s ease;
+}
+
+/* BARRAS (PROGRESSO E VOLUME) */
+.range-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20% 1.2rem;
+    width: 100%;
+    margin-top: 25px; /* Espaço entre botões e barra */
+}
+
+.volume-section {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--cor-borda);
+    margin-top: 15px;
+}
+
+input[type="range"].custom-range {
+    -webkit-appearance: none;
+    appearance: none;
+    flex-grow: 1;
+    height: 5px;
+    background: var(--cor-borda);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Bolinha da Barra (Thumb) */
+input[type="range"].custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--cor-primaria);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.8s ease;
+}
+
+.time-info {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--cor-texto-claro);
+    min-width: 45px;
+    text-align: center;
+}
+
+/* PLAYLIST - CENTRALIZAÇÃO TOTAL */
+.playlist-section {
+    background-color: var(--cor-fundo-escuro);
+    padding: 3rem 25% 5rem;
+    margin-top: 40px;
+    border-top: 1px solid var(--cor-borda);
+    display: grid;
+    place-items: center; 
+    transition: background-color 0.8s ease;
+}
+
+.playlist-title { 
+    margin-bottom: 1.5rem; 
+    font-size: 1.3rem; 
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+.playlist { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+}
+
+.playlist-item {
+    background: var(--cor-fundo);
+    padding: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    /* Centralização via Grid para garantir alinhamento perfeito */
+    display: grid;
+    place-items: center; 
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.playlist-item .track-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    display: block;
+}
+
+.playlist-item .track-artist {
+    font-size: 0.9rem;
+    color: var(--cor-texto-claro);
+    display: block;
+}
+
+.playlist-item:hover { 
+    background-color: var(--cor-hover); 
+}
+
+.playlist-item.active { 
+    background-color: var(--cor-primaria) !important; 
+    color: white !important; 
+}
+
+.playlist-item.active .track-title,
+.playlist-item.active .track-artist { 
+    color: white !important; 
+}
+
+/* TRANSIÇÕES GLOBAIS DE COR */
+.player-header, .play-btn, .custom-range, 
+.playlist-section, .playlist-item, .song-title, .artist-name {
+    transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease;
+}
