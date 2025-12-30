@@ -4,9 +4,30 @@
 
 Access the full project running online:
 
-🔗 [https://8080-it7ahwp1espf2ftc1flko-b6ed10a8.manusvm.computer](https://music-player-five-phi.vercel.app/)
+🔗 https://8080-it7ahwp1espf2ftc1flko-b6ed10a8.manusvm.computer
 
 This link allows visitors to explore the music player exactly as intended, including playback controls, dynamic theming, and the interactive playlist.
+
+---
+
+## 🎬 Video Demonstration
+
+Watch a complete walkthrough of the Music Player in action:
+
+### **Project Overview & Features**
+
+This video demonstrates all the key features of the Didactic Music Player, including:
+
+* **Interactive Playback Controls**: Play, pause, skip forward, and skip backward through the playlist.
+* **Dynamic Theme System**: Watch the interface colors change automatically as you switch between songs.
+* **Progress Bar & Timeline**: Real-time progress tracking with seek functionality.
+* **Volume Control**: Adjust the audio volume with a smooth slider.
+* **Responsive Design**: See how the player adapts to different screen sizes.
+* **Playlist Navigation**: Click directly on any song in the playlist to play it immediately.
+
+> **Note:** For the best experience, watch the video in full screen and enable sound to hear the background music and see the theme transitions.
+
+https://github.com/user-attachments/assets/e491f677-91b2-4fc3-aeaa-658b3688e548
 
 ---
 
@@ -15,10 +36,11 @@ This link allows visitors to explore the music player exactly as intended, inclu
 This project is a simple and didactic **Music Player**, developed using **Pure HTML5**, **CSS3**, and **Pure JavaScript**. Its purpose is to demonstrate the implementation of an interactive audio player, covering everything from the semantic structure to the playback control logic and the application of dynamic themes.
 
 It is an excellent resource for learning about:
-*   The `HTMLMediaElement` API (`<audio>`).
-*   DOM manipulation for UI control.
-*   The use of **CSS Variables** for theming and customization.
-*   Playlist management and automatic playback.
+
+* The `HTMLMediaElement` API (`<audio>`).
+* DOM manipulation for UI control.
+* The use of **CSS Variables** for theming and customization.
+* Playlist management and automatic playback.
 
 ---
 
@@ -51,11 +73,11 @@ The `index.html` file defines the player's structure, using elements to ensure a
 
 ### **Main Components:**
 
-*   **`<div class="container">`**: Contains the entire player and playlist.
-*   **`<div class="song-info">`**: Displays the album cover and song details.
-*   **`<audio id="audioPlayer">`**: The central element that uses the `HTMLMediaElement` API for playback.
-*   **`<div class="controls">`**: Groups the control buttons (Play/Pause, Next, Previous).
-*   **`<div class="playlist-section">`**: Contains the interactive music list.
+* **`<div class="container">`**: Contains the entire player and playlist.
+* **`<div class="song-info">`**: Displays the album cover and song details.
+* **`<audio id="audioPlayer">`**: The central element that uses the `HTMLMediaElement` API for playback.
+* **`<div class="controls">`**: Groups the control buttons (Play/Pause, Next, Previous).
+* **`<div class="playlist-section">`**: Contains the interactive music list.
 
 ### **Structure Example (index.html):**
 
@@ -130,9 +152,9 @@ const songs = [
 
 Manages playback, audio events, and navigation between songs.
 
-*   **`AudioControl.toggle()`**: Toggles between playing and pausing.
-*   **`loadSong(index)`**: Loads a new song, updates the UI, and applies the theme.
-*   **Audio Events**: Handles `timeupdate` (progress bar), `loadedmetadata` (duration), and `ended` (automatic next song).
+* **`AudioControl.toggle()`**: Toggles between playing and pausing.
+* **`loadSong(index)`**: Loads a new song, updates the UI, and applies the theme.
+* **Audio Events**: Handles `timeupdate` (progress bar), `loadedmetadata` (duration), and `ended` (automatic next song).
 
 ### **`js/ui.js` (User Interface)**
 
@@ -144,8 +166,8 @@ Manages playback, audio events, and navigation between songs.
 
 No web server is required. To run the project:
 
-1.  **Download** or **clone** this repository.
-2.  Open the `index.html` file directly in your preferred web browser (Chrome, Firefox, Edge, etc.).
+1. **Download** or **clone** this repository.
+2. Open the `index.html` file directly in your preferred web browser (Chrome, Firefox, Edge, etc.).
 
 ---
 
@@ -153,18 +175,20 @@ No web server is required. To run the project:
 
 ### Adding New Songs
 
-1.  Add the audio file (`.mp3`) to the `assets/audio/` folder.
-2.  Add the album cover (`.png` or `.jpg`) to the `assets/images/` folder.
-3.  Edit `js/data.js` and add a new object to the `songs` array.
+1. Add the audio file (`.mp3`) to the `assets/audio/` folder.
+2. Add the album cover (`.png` or `.jpg`) to the `assets/images/` folder.
+3. Edit `js/data.js` and add a new object to the `songs` array.
 
 ### Creating New Themes
 
-1.  Edit `css/variables.css` and create a new selector `body.theme-musicaN` (where `N` is the ID of the new song).
-2.  Define the new color variables within this selector.
-3.  Update the `atualizarTema` function in `js/script.js` to apply the new theme class.
+1. Edit `css/variables.css` and create a new selector `body.theme-musicaN` (where `N` is the ID of the new song).
+2. Define the new color variables within this selector.
+3. Update the `atualizarTema` function in `js/script.js` to apply the new theme class.
 
 ---
 
 ## 📚 Conclusion
 
 This project is a solid foundation for anyone looking to explore audio manipulation and the creation of dynamic interfaces with pure web technologies. The modular structure and the use of CSS variables make it an excellent starting point for customization and expansion.
+
+*Documentation generated by **Manus AI**.*
